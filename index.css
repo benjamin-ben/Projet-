@@ -1,0 +1,15 @@
+.logoiut{
+    width: 70x;
+    height: 70px;
+  border-radius: 50%; /* crée un cercle en utilisant une valeur de 50% */
+  border: 10px solid #fff; /* ajoute une bordure de 3 pixels de couleur blanche */
+}
+.identifien{
+float: left;
+}
+.planlocal{
+  display: flex;
+  float: left;
+  width: 10%;
+  height: 15%;
+}

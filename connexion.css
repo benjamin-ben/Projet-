@@ -1,0 +1,40 @@
+legend{
+    justify-content: center;
+    text-align: center;
+    
+}
+.identifient{
+    justify-content: center;
+    text-align: center;
+    
+}
+fieldset{
+    display: block;
+    max-width: 50%;
+padding: 5%;
+margin-top: 10%;
+margin-left: 25%;
+margin-right: 25%;
+ border-radius: 20%;
+
+}
+form{
+    display: block;
+}
+
+body{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    transition: 1s;
+}
+h1{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
