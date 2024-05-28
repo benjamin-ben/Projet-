@@ -1,0 +1,24 @@
+button{
+    display: none;
+}
+h1,legend{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+fieldset{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+form{
+    justify-content: center;
+    text-align: center;
+}
+body{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
