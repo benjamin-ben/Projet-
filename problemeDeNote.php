@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="problemeDeNote.js"></script>
-    <link rel="stylesheet" href="problemeDeNote.css">
+    <link rel="stylesheet" href="css\problemeDeNote.css">
     <title>probleme de note</title>
 </head>
 <body> <h1>
@@ -47,6 +47,8 @@
             <option>ergonomie</option>
             
         </select><br><br>
+        <label for="commentaire"> description:</label>
+        <textarea name="commentaire" title="commentaire" id="commentaire" placeholder="decire la situatuion de votre probleme de note"></textarea><br><br>
 
         <button id="choisir" type="button">recue de paiement:</button>
         <label for="recue"> inserer un recue correspondans</label>

@@ -1,0 +1,31 @@
+button{
+    display: none;
+}
+h1,legend{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+select{  
+  text-align: center;
+    border-radius: 15%;
+    height: 25%;
+    width: 25%;
+
+}
+
+form{
+    justify-content: center;
+    text-align: center;
+}
+body{
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+label{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 1%;
+}
