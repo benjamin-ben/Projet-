@@ -1,6 +1,7 @@
 <?php
+session_start();
 // connecion à la bd
-$host="mysql:host=localhost; dbname=apprequete";
+$host="mysql:host=localhost; dbname=app_requete";
 $user="root";
 $password="";
 try
@@ -13,15 +14,15 @@ if(isset($_POST["envoyer"])){
     if($_SERVER['REQUEST_METHOD']=== "POST"){
         $nomcomplet=$_POST["nomcomplet"];
         $matricule=$_POST["matricule"];
+        $_SESSION["NomComplet"]=$_POST["nomcomplet"];
 
-                // Requête pour récupérer le du mot de passe
-    $stmt = $bd->prepare("SELECT NomComplet FROM etudiant WHERE MATRICULE= :matricule");
+                // Requête pour la récupération des informations NomComplet et MATRICULE.
+    $stmt = $bd->prepare("SELECT NomComplet FROM étudiant WHERE MATRICULE= :matricule");
     $stmt->bindParam(":matricule", $matricule);
     $stmt->execute();
     if ($stmt->rowCount() > 0) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $nomcompletbd = $row['NomComplet'];
-
         // Vérification du mot de passe
         if ($nomcomplet===$nomcompletbd) {
 

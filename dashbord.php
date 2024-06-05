@@ -7,6 +7,6 @@
     <script src="connexion.js" ></script>
 </head>
 <body>
-    
+    <a href="inscription.php"> inscrire un étudiant</a>
 </body>
 </html>

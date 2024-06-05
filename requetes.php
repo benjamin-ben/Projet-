@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +36,9 @@
         <div class="container-fluid"  >
         <div class="image1">
             <img src ="images/logoiut.png" alt="logo iut" class="logoiut">
+            <li class="nav-item" class="liste">
+                <a class="btn btn-outline-info" aria-current="page" href="#" _msttexthash="111306" _msthash="8"><?php   echo $_SESSION["NomComplet"] ?></a>
+              </li>
         </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" _msthidden="A" _mstaria-label="320099" _msthash="7">
             <span class="navbar-toggler-icon"></span>
@@ -143,9 +149,8 @@
         <!-- /END THE FEATURETTES -->
     
       </div><!-- /.container -->
-    
-    
-      <footer >
+    </main>
+    <footer >
           <div>
               <div class="bg-noir">
                   <div class="container max-w-[1220px] app-container px-4 2xl:px-0 mx-auto flex justify-between py-4 items-center text-white ">
@@ -195,12 +200,9 @@
                       <a target="_blank" href="#"><div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter injected-svg" data-src="/icons/twitter.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></div></div></a>
                       <a target="_blank" href=""><div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="injected-svg" data-src="/icons/instagram.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"></path></svg></div></div></a></div></div></div>
                         <div class="footer2"><iframe title="localisationiutdouala" class="rounded-md bg-secondary-500 border-none border-white min-h-[289px] w-full h-full " src="https://www.google.com/maps/place/Institut+universitaire+de+technologie+de+Douala/@4.0896623,9.6982975,13z/data=!4m10!1m2!2m1!1sInstitut+universitaire+de+technologie+de+Douala!3m6!1s0x10610fd4c7fd209f:0x2d7e89b7aade18bf!8m2!3d4.092079!4d9.7364457!15sCi9JbnN0aXR1dCB1bml2ZXJzaXRhaXJlIGRlIHRlY2hub2xvZ2llIGRlIERvdWFsYZIBB2NvbGxlZ2XgAQA!16s%2Fg%2F11rwq4dhf7?entry=ttu"></iframe></div></div></div><div class="bg-white"></div></div></div>
-      </footer>
-      <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">
-        Copyright ©2024 iut de Douala .All rights reserved
-    </div>
-    <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">Designed by Ben's.ABR</div>
-    </main>
+                          <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">Copyright ©2024 iut de Douala .All rights reserved</div>
+                          <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">Designed by Ben's.ABR</div>
+  </footer>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

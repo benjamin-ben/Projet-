@@ -1,8 +1,8 @@
 <?php
 // lancement d'une session de connexion;
 session_start();
-// connecion à la bd
-$host="mysql:host=localhost; dbname=apprequete";
+// connexion à la bd
+$host="mysql:host=localhost; dbname=app_requete";
 $user="root";
 $password="";
 try
@@ -10,24 +10,25 @@ try
     $bd=new PDO($host,$user,$password);
     $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// action quant on appuis sur le boutton envoyer
+// action quant on appuis sur le boutton connexion
 if(isset($_POST["connexion"])){
     if($_SERVER['REQUEST_METHOD']=== "POST"){
         $matricule=$_POST["matricule"];
         $password=$_POST["motdepasse"];
+        $matricule=strtoupper($matricule);
+        var_dump($password);
+        var_dump($matricule);
 
-                // Requête pour récupérer le du mot de passe
-    $stmt = $bd->prepare("SELECT MotDePasse FROM etudiant WHERE MATRICULE= :matricule");
+                // Requête pour récupérer le mot de passe dans la base de donnée
+    $stmt = $bd->prepare("SELECT MotDePasse, NomComplet FROM étudiant WHERE MATRICULE= :matricule");
     $stmt->bindParam(":matricule", $matricule);
     $stmt->execute();
-    if ($stmt->rowCount() > 0) {
+    if ($stmt->rowCount()==1) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $MotDePasse = $row['MotDePasse'];
-
-        // Vérification du mot de passe
-        if ($password===$MotDePasse) {
-
-            
+       $_SESSION['NomComplet'] = $row['NomComplet'];
+              // Vérification du mot de passe
+        if (password_verify($password, $MotDePasse)) {
           echo "Connexion au compte réussie!";
 // si connexion reussi afficher
           header("location:requetes.php");
@@ -63,12 +64,12 @@ catch(PDOException $e)
     <h1 class="text-info"><img src="images/logoiut.png" alt="#" width="70px" height="70px" border-radius="50%"><b>connectez-vous à votre compte</b></h1>
 <fieldset class="btn btn-outline-info">
     <legend>entrez vos informations de connexion</legend>
-    <form method="post">
+    <form action="" method="post">
         <div class="identifient">
             <label for="matricule">
                 matricule:
             </label>
-            <input type="text" placeholder="entrez votre atricule" name="matricule">
+            <input type="text" placeholder="entrez votre matricule" name="matricule">
             <br><br>
             <label for="motdepasse">
                 mot de passe:
