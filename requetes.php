@@ -6,10 +6,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css\index.css">
+    <link rel="stylesheet" href="css/bootstrap.min (2).css">
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>requete</title>
 
@@ -150,7 +149,7 @@ session_start();
     
       </div><!-- /.container -->
     </main>
-    <footer >
+    <!-- <footer >
           <div>
               <div class="bg-noir">
                   <div class="container max-w-[1220px] app-container px-4 2xl:px-0 mx-auto flex justify-between py-4 items-center text-white ">
@@ -202,7 +201,8 @@ session_start();
                         <div class="footer2"><iframe title="localisationiutdouala" class="rounded-md bg-secondary-500 border-none border-white min-h-[289px] w-full h-full " src="https://www.google.com/maps/place/Institut+universitaire+de+technologie+de+Douala/@4.0896623,9.6982975,13z/data=!4m10!1m2!2m1!1sInstitut+universitaire+de+technologie+de+Douala!3m6!1s0x10610fd4c7fd209f:0x2d7e89b7aade18bf!8m2!3d4.092079!4d9.7364457!15sCi9JbnN0aXR1dCB1bml2ZXJzaXRhaXJlIGRlIHRlY2hub2xvZ2llIGRlIERvdWFsYZIBB2NvbGxlZ2XgAQA!16s%2Fg%2F11rwq4dhf7?entry=ttu"></iframe></div></div></div><div class="bg-white"></div></div></div>
                           <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">Copyright ©2024 iut de Douala .All rights reserved</div>
                           <div class="text-center container app-container px-4 py-[14px] 2xl:px-0 mx-auto">Designed by Ben's.ABR</div>
-  </footer>
+  </footer> -->
+  <?php require('footer.php') ?>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

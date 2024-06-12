@@ -1,0 +1,102 @@
+
+/* Footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.section h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.section p,
+.section a {
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.section a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin: 5px 0;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 20px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.footer-bottom a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.planlocal{
+    display: flex;
+    float: left;
+    width: 5%;
+    height: 5%;
+  }
+  

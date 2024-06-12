@@ -17,7 +17,7 @@ if(isset($_POST["envoyer"])){
         $_SESSION["NomComplet"]=$_POST["nomcomplet"];
 
                 // Requête pour la récupération des informations NomComplet et MATRICULE.
-    $stmt = $bd->prepare("SELECT NomComplet FROM étudiant WHERE MATRICULE= :matricule");
+    $stmt = $bd->prepare("SELECT NomComplet FROM eleves WHERE MATRICULE= :matricule");
     $stmt->bindParam(":matricule", $matricule);
     $stmt->execute();
     if ($stmt->rowCount() > 0) {

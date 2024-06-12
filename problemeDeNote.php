@@ -1,3 +1,36 @@
+<?php 
+session_start();
+require('connexionbd.php');
+
+if (isset($_POST['soumettre'])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $matricule = htmlspecialchars($_POST['matricule']);
+        $niveau = htmlspecialchars($_POST['niveau']);
+        $matiere= htmlspecialchars($_POST['matiere']);
+        $description = htmlspecialchars($_POST['commentaire']);
+        $recue =$_POST['recue'];
+        $id=$_SESSION['id'];
+
+        if (!empty($matricule) && !empty($niveau) && !empty($matiere) && !empty($description) && !empty($recue)) {
+            $stk = $bd->prepare("INSERT INTO problemesdenotes (id_eleve, MATRICULE, niveau, matiere, commentaire, RecuDePaiement) VALUES (:id_eleve, :MATRICULE, :niveau, :matiere, :commentaire, :RecuDePaiement)");
+            $stk->bindParam(":id_eleve", $id);
+            $stk->bindParam(":MATRICULE", $matricule);
+            $stk->bindParam(":niveau", $niveau);
+            $stk->bindParam(":matiere", $matiere);
+            $stk->bindParam(":commentaire", $description);
+            $stk->bindParam(":RecuDePaiement", $recue);
+
+            if ($stk->execute()) {
+                echo $_SESSION['NomComplet'] ." ". "votre requete sur la matiere :"; echo $matiere." ". "a ete envoyer";
+            } else {
+                echo "Une erreur s'est produite lors de l'envoi de votre demande.";
+            }
+        } else {
+            echo "Veuillez remplir tous les champs!";
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +56,14 @@
             matricule:
         </label>
         <input type="text" name="matricule" id="matricule">
-        <label for="matricule">
-            niveau:
-        </label>
-        <input type="text" name="matricule" id="matricule">
+        <label for="niveau">niveau:</label>
+        <select name="niveau" id="niveau">
+            <option value="niveau I">niveau I</option>
+            <option value="niveau II">niveau II</option>
+            <option value="niveau III">niveau III</option>
+            <option value="niveau IV">niveau IV</option>
+            <option value="niveau V">niveau V</option>
+        </select>
         <label for="matieres">
             les matieres 
         </label>

@@ -16,7 +16,7 @@ session_start();
             var_dump($nouveaumotdepasse);
             $_SESSION["NomComplet"];
                     // Requête pour récupérer le du mot de passe
-        $stmt = $bd->prepare("UPDATE étudiant SET MotDePasse=:nouveaumotdepasse WHERE NomComplet=:nomcomplet");
+        $stmt = $bd->prepare("UPDATE eleves SET MotDePasse=:nouveaumotdepasse WHERE NomComplet=:nomcomplet");
         $stmt->bindParam(":nomcomplet",  $_SESSION["NomComplet"]);
         $stmt->bindParam(":nouveaumotdepasse",  $nouveaumotdepasse);
         $stmt->execute();

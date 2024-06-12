@@ -13,20 +13,21 @@ try
 // action quant on appuis sur le boutton connexion
 if(isset($_POST["connexion"])){
     if($_SERVER['REQUEST_METHOD']=== "POST"){
-        $matricule=$_POST["matricule"];
+        $matricule = htmlspecialchars($_POST["matricule"]);
         $password=$_POST["motdepasse"];
         $matricule=strtoupper($matricule);
         var_dump($password);
         var_dump($matricule);
 
                 // Requête pour récupérer le mot de passe dans la base de donnée
-    $stmt = $bd->prepare("SELECT MotDePasse, NomComplet FROM étudiant WHERE MATRICULE= :matricule");
+    $stmt = $bd->prepare("SELECT MotDePasse, NomComplet, id FROM eleves WHERE MATRICULE= :matricule");
     $stmt->bindParam(":matricule", $matricule);
     $stmt->execute();
     if ($stmt->rowCount()==1) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $MotDePasse = $row['MotDePasse'];
        $_SESSION['NomComplet'] = $row['NomComplet'];
+       $_SESSION['id']=$row['id'];
               // Vérification du mot de passe
         if (password_verify($password, $MotDePasse)) {
           echo "Connexion au compte réussie!";

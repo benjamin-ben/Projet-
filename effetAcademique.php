@@ -8,6 +8,7 @@
 <body>
    <div> <p>releve de note</p>
     <ul>
+    <a href="pdf.php?eleve_id=1" target="_blank">Télécharger le Rapport</a>
         <li ><a  href="#">niveau I</a></li>
         <li><a href="#">niveau II</a></li>
         <li><a href="#">niveau III</a></li>
